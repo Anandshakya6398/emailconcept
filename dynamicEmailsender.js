@@ -39,6 +39,8 @@ async function sendEmail(templatePath, recieverEmail, toReplaceObject) {
         console.error('Error sending email:', error);
     }
 }
+
+// for demo purpose only 
 const toReplaceObject = {
     name: "Anand",
     otp: "1234"
