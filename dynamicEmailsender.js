@@ -46,6 +46,6 @@ const toReplaceObject = {
     otp: "1234"
 };
 
-sendEmail('./templates/otp.html', "amauryashaky198@gmail.com", toReplaceObject).then(() => {
+sendEmail('./templates/otp.html', process.env.EMAIL_TO, toReplaceObject).then(() => {
     console.log("Email sent successfully");
 })
