@@ -15,17 +15,17 @@ async function sendEmail(templatePath, recieverEmail, toReplaceObject) {
     try {
         const content = await updateTemplateHelper(templatePath, toReplaceObject);
         const techDetails = {
-            host: "smtp.sendgrid.net",
-            port: 465,
+            host: process.env.EMAIL_HOSTNAME,
+            port: process.env.EMAIL_PORT,
             secure: true,
             auth: {
-                user: "apikey",
+                user: process.env.EMAIL_USER,
                 pass: process.env.SENDGRID_API_KEY
             }
         };
         const msg = {
             to: recieverEmail, // Change to your recipient
-            from: 'anandshakya6398@gmail.com', // Change to your verified sender
+            from: process.env.EMAIL_FROM, // Change to your verified sender
             subject: 'Sending my First Email',
             text: 'and easy to do anywhere, even with Node.js',
             html: content,
