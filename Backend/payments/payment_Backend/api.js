@@ -49,10 +49,10 @@ app.post("/checkout", async (req, res) => {
         })
     }
 })
-app.post("/verify", function () {
-    //  that payemnt is done -> razorpay
-    // update the status of the user -> order , premium 
-})
+// app.post("/verify", function () {
+//     //  that payemnt is done -> razorpay
+//     // update the status of the user -> order , premium 
+// })
 
 app.listen(PORT, function () {
     console.log(`server is running on port ${PORT}`);
