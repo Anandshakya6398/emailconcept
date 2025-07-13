@@ -29,7 +29,7 @@ function App() {
       await loadScript();
 
       const finalOrderObject = {
-        key: "rzp_test_S0AQgloJHdsOY4",
+        key: "rzp_test_JKwfagUTgzvSCU",
         "amount": order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
         "currency": order.currency,
         "name": "Acme Corp",
